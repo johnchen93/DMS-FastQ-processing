@@ -56,6 +56,7 @@ Each row in the spreadsheet gives information on the appropriate trimming behavi
 
 ## Using the scripts to process sequencing reads into fitness scores
 The following is a flowchart of the scripts' working order:  
+  
 ![scripts workflow](https://github.com/johnchen93/DMS-FastQ-processing/blob/master/script_flowchart.png)
 
 Running times for merging paired end reads is the slowest step, and could take a few minutes per million paired end reads. The run time will scale with the number of reads given to the program. Run times for all other scripts are shorter than a few minutes total.
