@@ -41,7 +41,7 @@ Each row in the spreadsheet corresponds to a single sample with the following in
 * label - Label to use for identifying the general experimental condition of the sample. Usually the name of an antibiotic, nosel (no selection) or wt (no selection, wt DNA).  
 * conc - Concentration of antibiotic used in screen.  
 * temp - Temperature of screen.  
-* group - Gene mutational library group.  
+* group - Gene mutational library group.   
 * rep - Replicate number.  
 * read - Forward or reverse read. By illumina convention, 1 is the forward read and 2 is the reverse read.  
   
