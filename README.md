@@ -6,7 +6,6 @@ The scripts require a python 3 installation along with the following packages:
 1. pandas  
 2. numpy  
 3. matplotlib  
-4. seaborn  
 
 # Installation
 The scripts require no installation. To use the script, set up a working python 3 environment by either  
@@ -20,7 +19,7 @@ or
 ## Setting up the environment
 Clone or download this GitHub project to your local machine, which will create a folder with all the scripts inside.
 
-Download the example data sets and extract them into a new folder named 'inputs', in the same directory as all the scripts. The file structure should look something like this:  
+Download the example data sets from the release page (https://github.com/johnchen93/DMS-FastQ-processing/releases/tag/v1.0) and extract them into a new folder named 'inputs', in the same directory as all the scripts. The file structure should look something like this:  
 DMS-FastQ-processing/  
   
 * inputs/  
@@ -36,7 +35,7 @@ With python installed, each of the scripts can be run directly from the folder w
 ## Preparing sample information
 Sequencing read files can be organized in the "sample_reference.xlsx" excel workbook with 2 named spreadsheets:
 
-1.samples  
+1. samples  
 Each row in the spreadsheet corresponds to a single sample with the following information:  
 * path - Filepath to the FastQ file. Can be relative or absolute path, with relative paths specified relative to where the scripts are being run.  
 * label - Label to use for identifying the general experimental condition of the sample. Usually the name of an antibiotic, nosel (no selection) or wt (no selection, wt DNA).  
@@ -46,7 +45,7 @@ Each row in the spreadsheet corresponds to a single sample with the following in
 * rep - Replicate number.  
 * read - Forward or reverse read. By illumina convention, 1 is the forward read and 2 is the reverse read.  
   
-2.trim_info  
+2. trim_info  
 Each row in the spreadsheet gives information on the appropriate trimming behavior for each of the mutational library groups.   Each library group indicates a consecutive segment of the target gene that contains mutations. Numbers indicate number of nucleotide positions.  
 * gene - Label to indicate the gene. Multiple genes can be placed in the sheet.  
 * group - Gene mutational library group.  
@@ -64,9 +63,9 @@ Running times for merging paired end reads is the slowest step, and could take a
 The code is run in the following order:
 
 ### 0. FastQ file sorting  
-- A script is provided as an example on how to organize the FastQ files. This script will need to be modified if the filenames have different naming conventions.  
+- The "samples_to_csv.py" script is provided as an example on how to organize the FastQ files. This script will need to be modified if the filenames have different naming conventions.  
 - Initially, the only folder will be 'input', which contains subfolders that contain individual sequencing files in fastQ format (fwd and rev separate). (see "setting up the environment" above)  
-- Use the 'samples_to_csv.py' script to gather all filenames in the directories. The script will also parse the experimental conditions based on the file name. This will provide an output file called "parsed_samples.txt".
+- Use the 'samples_to_csv.py' script to gather all filenames in the directories. The script will also parse the experimental conditions based on the file name. This will provide an output file called "parsed_samples.txt", in tab separated format.
 - Copy and paste the output into the excel workbook named "sample_reference.xlsx", and name the sheet "samples". This will be used by later scripts to systematically process all files.  
 - The "sample_reference.xlsx" will also have a sheet named "trim_info". As the name implies, it contains information on how reads from each sample should be trimmed, which is specific to our experimental and sequencing set up.  
 
