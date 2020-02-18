@@ -9,7 +9,7 @@ The scripts require a python 3 installation along with the following packages:
 
 # Installation
 The scripts require no installation. To use the script, set up a working python 3 environment by either  
-1. Downloading python 3 as a standalone installation (https://www.python.org/downloads/) and using pip-install command to install the required packages  
+1. Downloading python 3 as a standalone installation (https://www.python.org/downloads/) and using the 'pip-install' command to install the required packages.
   
 or  
   
@@ -52,7 +52,7 @@ Each row in the spreadsheet gives information on the appropriate trimming behavi
 * fwd trim - Number of nucleotides to remove from the front of the forward read.  
 * rev trim - Number of nucleotides to remove from the front of the reverse read.  
 * offset - Keeps track of the starting nucleotide position of the library group. Used for obtaining gene codon and residue positions.  
-* length - The number of nucleotides to take from the read after the starting nucleotide. Nucleotides after this length are removed.  
+* length - The number of nucleotides to take from the start of the read after trimming. Nucleotides after this length are removed.  
 
 ## Using the scripts to process sequencing reads into fitness scores
 The following is a flowchart of the scripts' working order:  
