@@ -97,7 +97,7 @@ The code is run in the following order:
 ### 3. Filter non-selected library for variants due to noise
     
 - Run the 'filter_nosel_library.py' script. Results are saved in the newly created 'scoring' folder.  
-- The variants identified in the non-selceted library (2a) are filtered using the expected mutation rates due to sequencing errors (2b). By default, non-selected variants with a count less than 2x the count expected (wt count * expected mutation rate for the wt codon), or a count less or equal to 5 are filtered out.  
+- The variants identified in the non-selected library (2a) are filtered using the expected mutation rates due to sequencing errors (2b). By default, non-selected variants with a count less than 2x the count expected (wt count * expected mutation rate for the wt codon), or a count less or equal to 5 are filtered out.  
 - The "filter_nosel_library.py" script has an optional argument 'libs' in the code that can be modified to select which experimental condition should be used for noise filtering.  
 - The non-selected library with filtering information is saved in 'scoring', with one file for codon variants and another for amino acid variants.  
 
