@@ -1,8 +1,9 @@
 # DMS-FastQ-processing
 A set of scripts for analyzing deep sequencing data for deep mutational scanning (DMS). 
   
-Used in the following publication:
-[Comprehensive exploration of the translocation, stability and substrate recognition requirements in VIM-2 lactamase](https://elifesciences.org/articles/56707)
+Used in the following publications:  
+* [Comprehensive exploration of the translocation, stability and substrate recognition requirements in VIM-2 lactamase](https://elifesciences.org/articles/56707)  
+* [Environmental selection and epistasis in an empirical phenotype–environment–fitness landscape](https://www.nature.com/articles/s41559-022-01675-5)
 
 # System requirements
 The scripts require a python 3 installation along with the following packages:  
